@@ -5,72 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BrukD – Ready-Made Clothing</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #9333ea);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      color: #f1f5f9;
       line-height: 1.6;
     }
 
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     header {
-      background: #1e293b;
-      color: white;
       text-align: center;
-      padding: 2rem;
+      padding: 4rem 1rem 2rem;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, #f59e0b, #84cc16, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header nav {
+      margin-top: 1rem;
     }
 
     header nav a {
+      color: #facc15;
       margin: 0 1rem;
-      color: #e2e8f0;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     header nav a:hover {
-      text-decoration: underline;
+      color: #f472b6;
     }
 
     section {
-      padding: 2rem;
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #e0f2fe;
+      border-bottom: 2px dashed #38bdf8;
+      padding-bottom: 0.5rem;
     }
 
     .product-grid, .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
     }
 
     .product-card, .team-member {
-      background: white;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
       padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 20px;
       text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover, .team-member:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
     .product-card img, .team-member img {
       max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      border: 3px solid #3b82f6;
+    }
+
+    h3, h4 {
+      margin: 0.5rem 0;
+      color: #f0abfc;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    #contact p {
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    #contact a {
+      color: #a5f3fc;
+      text-decoration: underline;
     }
 
     footer {
-      background: #1e293b;
-      color: white;
       text-align: center;
-      padding: 1rem;
-    }
-
-    a {
-      color: #1e40af;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: 0.9rem;
+      color: #cbd5e1;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>BrukD</h1>
-    <p>Ready-Made Streetwear that Moves With You</p>
+    <p>Ready-Made Streetwear That Moves With You</p>
     <nav>
       <a href="#products">Products</a>
       <a href="#team">Our Team</a>
