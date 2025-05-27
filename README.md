@@ -1,22 +1,20 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BrukD – Ready-Made Clothing</title>
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
+      height: 100%;
+      width: 100%;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #0f172a, #1e3a8a, #9333ea);
       background-size: 400% 400%;
       animation: gradientShift 20s ease infinite;
       color: #f1f5f9;
-      line-height: 1.6;
     }
 
     @keyframes gradientShift {
@@ -25,9 +23,15 @@
       100% { background-position: 0% 50%; }
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
     header {
       text-align: center;
-      padding: 4rem 1rem 2rem;
+      padding: 4vh 1rem 2vh;
       background: rgba(15, 23, 42, 0.9);
       backdrop-filter: blur(10px);
     }
@@ -56,9 +60,11 @@
     }
 
     section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
+      padding: 5vh 5vw;
+      flex-grow: 1;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     h2 {
@@ -74,6 +80,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2rem;
+      justify-content: center;
     }
 
     .product-card, .team-member {
@@ -93,6 +100,7 @@
 
     .product-card img, .team-member img {
       max-width: 100%;
+      height: auto;
       border-radius: 12px;
       margin-bottom: 0.75rem;
       border: 3px solid #3b82f6;
@@ -119,7 +127,7 @@
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2vh 1rem;
       background: rgba(0, 0, 0, 0.5);
       font-size: 0.9rem;
       color: #cbd5e1;
